@@ -1,4 +1,4 @@
-type BaseRuleOptions = { message: string; lang?: string; }
+type BaseRuleOptions = { message?: string; lang?: string; }
 type MinMaxRuleOptions = BaseRuleOptions & { value: number }
 type PatternOptions = BaseRuleOptions & { value: RegExp }
 
@@ -40,7 +40,7 @@ function requiredRule(param?: string | BaseRuleOptions) {
   if (typeof param === 'string') {
     message = param;
   } else if (typeof param === 'object') {
-    message = param.message;
+    if (param.message) message = param.message;
   }
 
   return {
@@ -59,7 +59,7 @@ function minLengthRule(param?: number | MinMaxRuleOptions) {
     message = replaceAll(message, '{{value}}', param.toString());
   } else if (typeof param === 'object') {
     value = param.value
-    message = param.message;
+    if (param.message) message = param.message;
   }
 
   return {
@@ -78,7 +78,7 @@ function maxLengthRule(param?: number | MinMaxRuleOptions) {
     message = replaceAll(message, '{{value}}', param.toString());
   } else if (typeof param === 'object') {
     value = param.value
-    message = param.message;
+    if (param.message) message = param.message;
   }
 
   return {
@@ -96,7 +96,7 @@ function patternRule(param?: RegExp | PatternOptions) {
     value = param;
   } else if (typeof param === 'object') {
     value = param.value
-    message = param.message;
+    if (param.message) message = param.message;
   }
 
   return {
