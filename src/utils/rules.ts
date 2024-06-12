@@ -32,8 +32,8 @@ function getMessage(error: Errors) {
   return 'error';
 }
 
-function requiredRule(message?: string): void;
-function requiredRule(options?: BaseRuleOptions): void;
+function requiredRule(message?: string): { required: string | undefined }
+function requiredRule(options?: BaseRuleOptions): { required: string | undefined }
 function requiredRule(param?: string | BaseRuleOptions) {
   let message = getMessage('required')
 
@@ -48,8 +48,8 @@ function requiredRule(param?: string | BaseRuleOptions) {
   }
 }
 
-function minLengthRule(value: number): void;
-function minLengthRule(options?: MinMaxRuleOptions): void;
+function minLengthRule(value: number): { minLength: { value: number; message: string; } }
+function minLengthRule(options?: MinMaxRuleOptions): { minLength: { value: number; message: string; } }
 function minLengthRule(param?: number | MinMaxRuleOptions) {
   let message = getMessage('minLength')
   let value: number | undefined;
@@ -67,8 +67,8 @@ function minLengthRule(param?: number | MinMaxRuleOptions) {
   }
 }
 
-function maxLengthRule(value: number): void;
-function maxLengthRule(options?: MinMaxRuleOptions): void;
+function maxLengthRule(value: number): { maxLength: { value: number; message: string; } }
+function maxLengthRule(options?: MinMaxRuleOptions): { maxLength: { value: number; message: string; } }
 function maxLengthRule(param?: number | MinMaxRuleOptions) {
   let message = getMessage('maxLength')
   let value: number | undefined;
@@ -86,8 +86,8 @@ function maxLengthRule(param?: number | MinMaxRuleOptions) {
   }
 }
 
-function patternRule(value: RegExp): void;
-function patternRule(options?: PatternOptions): void;
+function patternRule(value: RegExp): { pattern: { value: RegExp; message: string; } }
+function patternRule(options?: PatternOptions): { pattern: { value: RegExp; message: string; } }
 function patternRule(param?: RegExp | PatternOptions) {
   let message = getMessage('pattern')
   let value: RegExp | undefined;
