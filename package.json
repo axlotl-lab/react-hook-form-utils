@@ -1,17 +1,15 @@
 {
-  "name": "react-hook-form-utils",
-  "version": "1.0.0",
+  "name": "@axlotl-lab/react-hook-form-utils",
+  "version": "1.0.1",
   "description": "Utils for reac-hook-form package",
   "exports": {
-    "exports": {
-      "import": {
-        "types": "./dist/es/index.d.mts",
-        "default": "./dist/es/index.mjs"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.ts",
-        "default": "./dist/cjs/index.js"
-      }
+    "import": {
+      "types": "./dist/es/index.d.mts",
+      "default": "./dist/es/index.mjs"
+    },
+    "require": {
+      "types": "./dist/cjs/index.d.ts",
+      "default": "./dist/cjs/index.js"
     }
   },
   "files": [
