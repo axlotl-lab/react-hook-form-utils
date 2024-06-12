@@ -1,0 +1,42 @@
+{
+  "name": "react-hook-form-utils",
+  "version": "1.0.0",
+  "description": "Utils for reac-hook-form package",
+  "exports": {
+    "exports": {
+      "import": {
+        "types": "./dist/es/index.d.mts",
+        "default": "./dist/es/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "bunchee",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "axlotl-lab",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axlotl-lab/react-hook-form-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/axlotl-lab/react-hook-form-utils/issues"
+  },
+  "devDependencies": {
+    "bunchee": "^5.1.6",
+    "turbo": "^2.0.3",
+    "typescript": "^5.4.5"
+  }
+}
