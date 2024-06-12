@@ -1,7 +1,7 @@
 {
   "name": "@axlotl-lab/react-hook-form-utils",
-  "version": "1.0.5",
-  "description": "Utils for reac-hook-form package",
+  "version": "1.0.6",
+  "description": "Utils for react-hook-form package",
   "exports": {
     "import": {
       "types": "./dist/es/index.d.mts",
