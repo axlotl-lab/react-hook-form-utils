@@ -58,7 +58,7 @@ function minLengthRule(param: number | MinMaxRuleOptions) {
 
   if (typeof param === 'number') {
     value = param;
-    message = replaceAll(getMessage('minLength'), '{{value}}', param.toString());
+    message = getMessage('minLength');
   } else {
     const lang = param.lang;
     value = param.value;
@@ -66,7 +66,7 @@ function minLengthRule(param: number | MinMaxRuleOptions) {
   }
 
   return {
-    minLength: { value, message }
+    minLength: { value, message: replaceAll(message, '{{value}}', value.toString()) }
   }
 }
 
@@ -78,7 +78,7 @@ function maxLengthRule(param: number | MinMaxRuleOptions) {
 
   if (typeof param === 'number') {
     value = param;
-    message = replaceAll(getMessage('maxLength'), '{{value}}', param.toString());
+    message = getMessage('maxLength');
   } else {
     const lang = param.lang;
     value = param.value;
@@ -86,7 +86,7 @@ function maxLengthRule(param: number | MinMaxRuleOptions) {
   }
 
   return {
-    maxLength: { value, message }
+    maxLength: { value, message: replaceAll(message, '{{value}}', value.toString()) }
   }
 }
 
