@@ -4,6 +4,7 @@ type PatternOptions = BaseRuleOptions & { value: RegExp }
 
 type Errors = 'required' | 'minLength' | 'maxLength' | 'pattern'
 type ErrorMessages = { [key in Errors]: string | Dictionary<string> }
+export type RulesMessageConfig = { lang?: string, messages: Partial<ErrorMessages> }
 
 function replaceAll(input: string, search: string | RegExp, replacement: string): string {
   if (typeof search === 'string') {
@@ -109,8 +110,8 @@ function patternRule(param: RegExp | PatternOptions) {
   }
 }
 
-function overrideRuleMessages({ lang, messages }: { lang: string, messages: Partial<ErrorMessages> }) {
-  REACT_HOOK_UTILS_DEFAULTS.lang = lang;
+function overrideRuleMessages({ lang, messages }: RulesMessageConfig) {
+  if (lang) REACT_HOOK_UTILS_DEFAULTS.lang = lang;
   REACT_HOOK_UTILS_DEFAULTS.messages = { ...REACT_HOOK_UTILS_DEFAULTS.messages, ...messages };
 }
 
