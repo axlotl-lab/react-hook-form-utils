@@ -12,7 +12,6 @@ A collection of utility functions to simplify setting up validation rules for re
   - [maxLengthRule](#maxlengthrule)
   - [patternRule](#patternrule)
   - [overrideRuleMessages](#overriderulemessages)
-- [Types](#types)
 
 ## Installation
 
