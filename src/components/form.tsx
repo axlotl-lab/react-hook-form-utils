@@ -20,7 +20,7 @@ const Form = <
   TFieldValues extends FieldValues,
   TContext = any,
   TTransformedValues extends FieldValues | undefined = undefined
->({ children, id, autoComplete = "off", noValidate,
+>({ children, id, autoComplete = "off", noValidate = true,
   onSubmit, style, className,
   ...props }: FormProviderProps<TFieldValues, TContext, TTransformedValues> & FormProps) => {
   return (
