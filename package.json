@@ -60,7 +60,8 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
-    "classnames": "^2.5.1"
+    "classnames": "^2.5.1",
+    "lucide-react": "^0.399.0"
   },
   "peerDependencies": {
     "react": ">=18",
