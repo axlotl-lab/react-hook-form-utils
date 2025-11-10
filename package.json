@@ -31,7 +31,8 @@
     "build:publish": "npm run build && npm publish",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "release": "node ./release.js"
   },
   "author": "axlotl-lab",
   "license": "ISC",
