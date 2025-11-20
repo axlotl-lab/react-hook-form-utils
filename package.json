@@ -28,7 +28,7 @@
   "scripts": {
     "build": "bunchee",
     "build:sass": "sass ./src/styles/index.sass dist/axlotl.css",
-    "build:publish": "npm run build && npm publish",
+    "prepublishOnly": "npm test && npm run build",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
