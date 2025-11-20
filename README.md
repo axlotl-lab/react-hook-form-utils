@@ -1,5 +1,7 @@
 # react-hook-form-utils
 
+[![npm version](https://img.shields.io/npm/v/@axlotl-lab/react-hook-form-utils.svg)](https://www.npmjs.com/package/@axlotl-lab/react-hook-form-utils)
+
 A collection of utility functions to simplify setting up validation rules for react-hook-form.
 
 ## Table of Contents
